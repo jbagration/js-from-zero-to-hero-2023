@@ -1,15 +1,10 @@
-/*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/*==================== VARIABLES CSS ====================*/
 :root {
     --header-height: 3rem;
 
-    /*========== Colors ==========*/
-    /* Change favorite color */
-    --hue-color: 230; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 230; 
 
-    /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%) ;
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -23,10 +18,8 @@
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-    /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
 
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -35,12 +28,9 @@
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 
-    /*========== Font weight ==========*/
     --font-medium: 500;
     --font-semi-bold: 600;
 
-    /*========== Margenes Bottom ==========*/
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
@@ -50,13 +40,11 @@
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
 
-    /*========== z index ==========*/
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 1000;
 }
 
-/* Font size for large devices */
 @media screen and (min-width: 968px) {
     :root {
         --big-font-size: 3rem;
@@ -69,9 +57,7 @@
     }
 }
 
-/*========== Variables Dark theme ==========*/
 body.dark-theme {
-    /* HSL color mode */
 --first-color-second: hsl(var(--hue-color), 30%, 8%);
 --title-color: hsl(var(--hue-color), 8%, 95%);
 --text-color: hsl(var(--hue-color), 8%, 45%);
@@ -83,8 +69,6 @@ body.dark-theme {
 --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
-
-/*========== Button Dark/Light ==========*/
 .nav__btns {
     display: flex;
     align-items: center;
@@ -102,9 +86,6 @@ body.dark-theme {
     color: var(--first-color);
 }
 
-
-
-/*==================== BASE ====================*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -141,7 +122,6 @@ img {
     height: auto;
 }
 
-/*==================== REUSABLE CSS CLASSES ====================*/
 .section {
     padding: 2rem 0 4rem;
 
@@ -161,7 +141,6 @@ img {
     text-align: center;
 }
 
-/*==================== LAYOUT ====================*/
 .container {
     max-width: 768px;
     margin-left: var(--mb-1-5);
@@ -182,8 +161,6 @@ img {
     background-color: var(--body-color);
 
 }
-
-/*==================== NAV ====================*/
 
 .nav {
     max-width: 968px;
@@ -262,23 +239,20 @@ img {
 .nav__close:hover {
     color: var(--first-color-alt)
 }
-/* show menu */
+
 .show-menu{
     bottom: 0
 }
 
-/* Active link */
 .active-link {
     color: var(--first-color);
 }
 
-/* Change background header */
 .scroll-header {
     box-shadow: 0 -1px 4px rgba(0,0,0, .15);
     
 }
 
-/*==================== HOME ====================*/
 .home__container {
     gap: 1rem;
 }
@@ -361,7 +335,6 @@ img {
     font-size: 1.25rem;
 
 }
-/*==================== BUTTONS ====================*/
 
 .button {
     display: inline-block;
@@ -414,8 +387,6 @@ img {
     color: var(--first-color-alt);
 }
 
-
-/*==================== ABOUT ====================*/
 .about__img {
     width: 200px;
     border-radius: .5rem;
@@ -458,7 +429,6 @@ img {
     justify-content: center;
 }
 
-/*==================== SKILLS ====================*/
 .skills__container {
     row-gap: 0;
 }
@@ -554,7 +524,6 @@ img {
     width: 40%;
 }
 
-
 .skills__close .skills__list {
     height: 0;
     overflow: hidden;
@@ -570,7 +539,7 @@ img {
 .skills_open .skills__arrow {
     transform: rotate(-180deg);
 }
-/*==================== QUALIFICATION ====================*/
+
 .qualification__tabs {
     display: flex;
     justify-content: space-evenly;
@@ -612,8 +581,6 @@ img {
 .qualification__calendar {
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
-    /* margin-bottom: var(--mb-1) */
-
 }
 
 .qualification__rounder {
@@ -645,13 +612,11 @@ img {
     color: var(--first-color)
 }
 
-/* Active Modal */
 .active-modal {
     opacity: 1;
     visibility: visible;
 }
 
-/*==================== PORTFOLIO ====================*/
 .portfolio__container {
     overflow: initial;
 }
@@ -703,8 +668,6 @@ img {
 
 }
 
-
-/*==================== CONTACT ME ====================*/
 .contact__container {
     row-gap: 3rem;
 }
@@ -752,7 +715,6 @@ img {
     padding: .25rem .5rem .5rem 0;
 }
 
-/*==================== FOOTER ====================*/
 .footer {
     padding-top: 2rem;
 }
@@ -809,7 +771,6 @@ img {
     color: #FFF;
 }
 
-/*========== SCROLL UP ==========*/
 .scrollup {
     position: fixed;
     right: 1rem;
@@ -831,12 +792,10 @@ img {
     color: #FFF;
 }
 
-/* Show scroll */
 .show-scroll {
     bottom: 5rem;
 }
 
-/*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar {
     width: .60rem;
     background-color: var(--scroll-bar-color);
@@ -852,8 +811,6 @@ img {
     background-color: var(--text-color-light);
 }
 
-/*==================== MEDIA QUERIES ====================*/
-/* For small devices */
 @media screen and (max-width: 350px) {
     .container {
         margin-left: var(--mb-1);
@@ -914,7 +871,6 @@ img {
     }
 }
 
-/* For medium devices */
 @media screen and (min-width: 568px) {
     .home__content {
         grid-template-columns: max-content 1fr 1fr;
@@ -1089,8 +1045,6 @@ img {
 
     }
 }
-
-/* For large devices */
 @media screen and (min-width: 1024px) {
     .header,
     .main,
